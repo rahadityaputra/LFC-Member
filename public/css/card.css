@@ -1,0 +1,173 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  background-image: url("../image/celebration2.jpg");
+  background-size: cover;
+  background-position: top;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(0.7px);
+}
+
+.card {
+  width: 350px;
+  height: 450px;
+  margin-top: 50px;
+  perspective: 1000px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d; 
+}
+
+.flipped {
+  transform: rotateY(180deg); 
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #c8102e, #d84040);
+  color: white;
+}
+
+.card-front {
+  color: white;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-header {
+  color: white;
+  font-weight: bold;
+  width: 100%;
+}
+
+.card-logo {
+  width: 40px;
+  margin-right: 10px;
+}
+.card-profile {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.card-profile img {
+  width: 150px;
+}
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge-member {
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+.badge {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.badge:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  filter: blur(5px);
+}
+
+.badge-international {
+  background: linear-gradient(180deg, #ffd700, #b8860b); 
+  border: 2px solid #8b6914; /* Border emas gelap */
+}
+
+.badge-junior {
+  background: linear-gradient(180deg, #00bfff, #1e90ff); 
+  border: 2px solid #104e8b; /* Border biru gelap */
+}
+
+.badge-regular {
+  background: linear-gradient(180deg, #32cd32, #228b22);
+  border: 2px solid #006400; /* Border hijau gelap */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+td {
+  padding: 8px;
+  vertical-align: top;
+  text-align: left;
+}
+
+td:first-child {
+  display: flex;
+  justify-content: flex-start;
+  white-space: nowrap;
+  padding-right: 10px; 
+}
+
+td:first-child p {
+  display: inline-block;
+  margin: 0;
+}
+
+td span {
+  display: inline-block;
+  text-align: left;
+}
+
+.colon {
+  width: 10px; 
+  text-align: center; 
+}
+
+.navbar {
+  height: 10vh;
+  background-color: #d00027;
+}
+
+.main {
+  height: 90vh;
+}
